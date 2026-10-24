@@ -1,0 +1,111 @@
+# Org-wide issue form. Applies to every linuxserver-playground repository that does not define its own.
+name: Bug report
+description: Report a reproducible problem in one of the playground container images
+title: "[BUG] <image>: <title>"
+labels: [Bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The images in `linuxserver-playground` are a proof of concept and are **not supported for production use**.
+        Before filing, read the [support policy](https://docs.linuxserver.io/misc/support-policy/) and the
+        [image documentation](https://docs.linuxserver.io/images/). Support questions belong on
+        [Discord](https://linuxserver.io/discord) or [Discussions](https://github.com/orgs/linuxserver-playground/discussions),
+        not here. Build status and test reports for every image are on the
+        [control plane dashboard](https://ci.thelamer.duckdns.org:8443).
+  - type: checkboxes
+    id: existing-issue
+    attributes:
+      label: Is there an existing issue for this?
+      description: Please search to see if an issue already exists for the bug you encountered.
+      options:
+        - label: I have searched the existing issues
+          required: true
+        - label: I reproduced this on the latest image, with mods and custom scripts disabled
+          required: true
+  - type: input
+    id: image-name
+    attributes:
+      label: Image name
+      description: The image this report is about, as published under `ghcr.io/linuxserver-playground/`.
+      placeholder: sonarr
+    validations:
+      required: true
+  - type: input
+    id: image-tag
+    attributes:
+      label: Image tag
+      description: The tag you are running. The exact `<upstream>-ls<N>` tag from `docker image inspect` is best.
+      placeholder: 4.0.20.3014-ls1
+    validations:
+      required: true
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: Current Behavior
+      description: Tell us what happens instead of the expected behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: Tell us what should happen.
+    validations:
+      required: false
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps To Reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. In this environment...
+        2. With this config...
+        3. Run '...'
+        4. See error...
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: |
+        examples:
+          - **OS**: Ubuntu 24.04
+          - **How docker service was installed**: distro's package manager
+      value: |
+        - OS:
+        - How docker service was installed:
+      render: markdown
+    validations:
+      required: false
+  - type: dropdown
+    id: cpu-architecture
+    attributes:
+      label: CPU architecture
+      options:
+        - x86-64
+        - arm64
+    validations:
+      required: true
+  - type: textarea
+    id: docker-creation
+    attributes:
+      label: Docker creation
+      description: |
+        Command used to create the container.
+        Provide your docker create/run command or compose yaml snippet, or a screenshot of settings if using a GUI to create the container.
+      render: bash
+    validations:
+      required: true
+  - type: textarea
+    id: container-logs
+    attributes:
+      label: Container logs
+      description: |
+        Provide the full container log from startup, the output of `docker logs <container name>`.
+      placeholder: |
+        Output of `docker logs <container name>`
+      render: bash
+    validations:
+      required: true

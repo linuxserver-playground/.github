@@ -1,0 +1,51 @@
+# Org-wide issue form. Applies to every linuxserver-playground repository that does not define its own.
+name: Feature request
+description: Suggest a change to one of the playground container images or tools
+title: "[FEAT] <image>: <title>"
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before asking, decide where the change belongs. A bug or feature in the application itself goes
+        upstream. Something only you need is a [custom script](https://docs.linuxserver.io/general/container-customization/).
+        Something a subset of users need is a [Docker Mod](https://github.com/linuxserver-playground/docker-mods).
+        Only changes that benefit most users of an image belong in the image repository.
+        See the [support policy](https://docs.linuxserver.io/misc/support-policy/) and [documentation](https://docs.linuxserver.io/).
+  - type: checkboxes
+    id: existing-request
+    attributes:
+      label: Is this a new feature request?
+      description: Please search to see if a feature request already exists.
+      options:
+        - label: I have searched the existing issues
+          required: true
+  - type: input
+    id: image-name
+    attributes:
+      label: Image or repository name
+      description: The image (`sonarr`, `swag`, ...) or playground repository (`builder`, `workflows`, `ci`, `hub`, `control`) this request is about.
+      placeholder: sonarr
+    validations:
+      required: true
+  - type: textarea
+    id: wanted-change
+    attributes:
+      label: Wanted change
+      description: Tell us what you want to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: reason-for-change
+    attributes:
+      label: Reason for change
+      description: Justify your request. Why do you want it, what is the benefit, and why does it belong in the image rather than in a mod or custom script?
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-code-change
+    attributes:
+      label: Proposed code change
+      description: Do you have a potential code change in mind?
+    validations:
+      required: false

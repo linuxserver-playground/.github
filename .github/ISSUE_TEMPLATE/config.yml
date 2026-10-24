@@ -1,0 +1,17 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Discord chat support
+    url: https://linuxserver.io/discord
+    about: Realtime support / chat with the community and the team.
+
+  - name: GitHub Discussions
+    url: https://github.com/orgs/linuxserver-playground/discussions
+    about: Post on our community forum.
+
+  - name: Documentation
+    url: https://docs.linuxserver.io/
+    about: Documentation - information about all of our containers.
+
+  - name: Control plane dashboard
+    url: https://ci.thelamer.duckdns.org:8443
+    about: Build status, test reports and releases for every image in the playground.
