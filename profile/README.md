@@ -24,7 +24,7 @@ every repository carries an `AGENTS.md` for the AI coding agents and the humans 
 
 | Repo | What it is |
 | --- | --- |
-| [workspace](https://github.com/linuxserver-playground/workspace) | **Start here to contribute:** clone it, run `bootstrap.sh`, and point your coding agent at its root. It maps every repo and how a change crosses them. |
+| [harness](https://github.com/linuxserver-playground/harness) | **Start here:** clone it and start your AI coding agent at its root. It works out whether you are on the team or contributing from outside, maps every repo, reads the live fleet, tests in your local Docker and drafts the issue, PR or review for you to file. |
 | [builder](https://github.com/linuxserver-playground/builder) | The contracts (`CONVENTIONS.md`, `schemas/`), the `image.yml` validator and renderer, and the AGENTS.md templates. |
 | [workflows](https://github.com/linuxserver-playground/workflows) | The reusable GitHub Actions workflows and composite actions every image repo calls at `v1`. |
 | [ci](https://github.com/linuxserver-playground/ci) | The container test harness that runs each built image and emits the release bundle. |
