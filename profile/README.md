@@ -15,6 +15,11 @@ The written contract behind all of it is
 [`CONTRIBUTING.md`](https://github.com/linuxserver-playground/.github/blob/main/CONTRIBUTING.md), and
 every repository carries an `AGENTS.md` for the AI coding agents and the humans driving them.
 
+**Want to help?** LinuxServer.io needs people more than money. The
+[Contribute page](https://linuxserver-playground.github.io/site/contribute/) shows the ways in, and the
+[harness](https://github.com/linuxserver-playground/harness) gives your AI coding agent everything it needs to
+know, so you can fix an image, make a mod or propose an app without learning the whole system first.
+
 > **Not for production use.** Images published under `ghcr.io/linuxserver-playground/` are experimental
 > and unsupported. They can be rebuilt, retagged or deleted at any time. Anything under `dev/` or
 > `untrusted-pr/` is unreviewed. For images you can rely on, use the ones published by

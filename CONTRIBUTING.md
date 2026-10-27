@@ -5,6 +5,10 @@ carry its own. It is written for the `docker-<name>` image repositories; the inf
 (`builder`, `workflows`, `ci`, `hub`, `control`) each have an `AGENTS.md` with the same headings that
 says what is specific to them.
 
+New here? Start with the [Contribute page](https://linuxserver-playground.github.io/site/contribute/) and the
+[harness](https://github.com/linuxserver-playground/harness), which lets an AI coding agent follow this file for
+you. You still answer for every line you submit.
+
 Everything here is a proof of concept. Images published from this organisation are not for production
 use. The full contract the repositories are built against is
 [`CONVENTIONS.md`](https://github.com/linuxserver-playground/builder/blob/main/CONVENTIONS.md) in the
