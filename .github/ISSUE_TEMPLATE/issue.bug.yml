@@ -12,7 +12,7 @@ body:
         [image documentation](https://docs.linuxserver.io/images/). Support questions belong on
         [Discord](https://linuxserver.io/discord) or [Discussions](https://github.com/orgs/linuxserver-playground/discussions),
         not here. Build status and test reports for every image are on the
-        [control plane dashboard](https://ci.thelamer.duckdns.org:8443).
+        [fleet board](https://linuxserver-playground.github.io/site/fleet/).
   - type: checkboxes
     id: existing-issue
     attributes:

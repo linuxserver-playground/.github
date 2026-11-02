@@ -144,8 +144,8 @@ after registering qemu with `docker run --rm --privileged lscr.io/linuxserver/qe
 
 Once the PR is open, GitHub Actions builds and tests both architectures and publishes the result to
 `ghcr.io/linuxserver-playground/untrusted-pr/<name>:pr-<number>-<sha7>` for reviewers (pull requests
-from forks upload the image as a workflow artifact instead). The build record and test report for every
-run are on the [control plane dashboard](https://ci.thelamer.duckdns.org:8443). PR images are deleted
+from forks upload the image as a workflow artifact instead). Each PR build posts its test report as a comment
+on the pull request. PR images are deleted
 when the PR closes and are never for production use.
 
 ## Pull request rules

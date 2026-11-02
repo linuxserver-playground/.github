@@ -6,8 +6,8 @@ README. Each container image lives in a thin `docker-<name>` repository that hol
 `root/` tree and one manifest, `image.yml`. Everything else in an image repo is generated from that
 manifest. One shared GitHub Actions workflow builds, tests and releases every image, attaching a
 machine-readable bundle to each GitHub Release. A hub ingests those bundles and generates every
-downstream artefact (docs pages, store templates, proxy confs). A public control plane schedules builds
-and shows the whole fleet at [ci.thelamer.duckdns.org:8443](https://ci.thelamer.duckdns.org:8443).
+downstream artefact (docs pages, store templates, proxy confs). A control plane schedules builds,
+and the website shows the whole fleet on its [fleet board](https://linuxserver-playground.github.io/site/fleet/).
 
 The written contract behind all of it is
 [`CONVENTIONS.md`](https://github.com/linuxserver-playground/builder/blob/main/CONVENTIONS.md) in the

@@ -12,6 +12,6 @@ contact_links:
     url: https://docs.linuxserver.io/
     about: Documentation - information about all of our containers.
 
-  - name: Control plane dashboard
-    url: https://ci.thelamer.duckdns.org:8443
+  - name: Fleet board
+    url: https://linuxserver-playground.github.io/site/fleet/
     about: Build status, test reports and releases for every image in the playground.
